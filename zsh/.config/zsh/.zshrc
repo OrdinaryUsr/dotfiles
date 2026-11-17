@@ -54,6 +54,8 @@ vim_cursor_mode
 # fzf shell integration: Ctrl+R history, Ctrl+T files, Alt+C cd, ** completion.
 # Must come after `bindkey -v` and fzf-tab so its bindings are not overwritten.
 command -v fzf >/dev/null 2>&1 && source <(fzf --zsh)
+# Input line on top everywhere (history search defaults to bottom otherwise)
+export FZF_DEFAULT_OPTS="--layout=reverse"
 
 # History
 HISTFILE=~/.histfile
