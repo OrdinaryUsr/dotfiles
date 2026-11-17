@@ -16,8 +16,8 @@ window-width = 160
 window-height = 45
 window-save-state = never
 # Space between the text and the window edges, in points
-window-padding-x = 8
-window-padding-y = 8
+window-padding-x = 4
+window-padding-y = 4
 
 # Mouse
 mouse-hide-while-typing = true
