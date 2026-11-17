@@ -9,7 +9,9 @@ theme = TokyoNight Night
 background-opacity = 0.96
 
 # Window (size is in terminal cells, not pixels)
-window-decoration = none
+# Hide the titlebar but keep native decorations: native fullscreen
+# (separate Space) does not work with window-decoration = none.
+macos-titlebar-style = hidden
 window-width = 160
 window-height = 45
 window-save-state = never
