@@ -7,6 +7,7 @@
 | `nvim`     | `~/.config/nvim`                                     |
 | `tmux`     | `~/.config/tmux`                                     |
 | `kitty`    | `~/.config/kitty`                                    |
+| `ghostty`  | `~/.config/ghostty`                                  |
 | `zsh`      | `~/.config/zsh` (нужен `ZDOTDIR`, см. ниже)          |
 | `opencode` | `~/.config/opencode`                                 |
 | `claude`   | отдельные файлы и каталоги внутри `~/.claude`        |
@@ -17,7 +18,7 @@
 brew install stow
 git clone <repo-url> ~/dotfiles
 cd ~/dotfiles
-stow nvim tmux kitty zsh opencode claude
+stow nvim tmux kitty ghostty zsh opencode claude
 ```
 
 Репозиторий должен лежать в `~/dotfiles`: stow по умолчанию создаёт симлинки в родительском каталоге.
