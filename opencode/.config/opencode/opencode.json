@@ -1,0 +1,39 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/gpt-5.2-codex",
+  "small_model": "opencode/claude-haiku-4.5",
+  "autoupdate": true,
+  "permission": {
+    "read": {
+      ".env": "deny",
+      ".env.*": "deny"
+    },
+    "edit": {
+      ".env": "deny",
+      ".env.*": "deny"
+    },
+    "external_directory": "ask",
+    "webfetch": "ask",
+    "bash": {
+      "*": "ask",
+
+      "sudo *": "deny",
+
+      "git status*": "allow",
+      "git log*": "allow",
+      "git diff*": "allow",
+      "git branch*": "allow",
+      "git push*": "deny",
+
+      "rm -rf /": "deny",
+      "rm -rf /*": "deny",
+      "rm -rf ~": "deny",
+      "rm -rf ~/*": "deny",
+
+      "isort*": "allow",
+      "black*": "allow",
+      "pytest*": "allow",
+      "pyright*": "allow"
+    }
+  }
+}

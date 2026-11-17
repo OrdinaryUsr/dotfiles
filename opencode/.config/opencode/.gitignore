@@ -1,0 +1,13 @@
+# OpenCode internal
+.opencode/
+
+# Node
+node_modules/
+bun.lock
+
+# OS
+.DS_Store
+
+# Backups and npm lockfile
+*.bak
+package-lock.json

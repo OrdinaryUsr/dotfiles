@@ -1,0 +1,8 @@
+# Dump
+.zcompdump
+
+# vim / neovim
+*.vim
+
+# Machine-local settings and secrets
+.zshrc.local
