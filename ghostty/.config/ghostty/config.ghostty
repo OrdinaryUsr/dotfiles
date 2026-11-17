@@ -1,6 +1,7 @@
 # Font
-# Without font-family Ghostty uses its built-in JetBrains Mono with Nerd Font symbols.
-# font-family = CommitMono Nerd Font Mono
+# Install with: brew install --cask font-commit-mono-nerd-font
+# If the font is missing, Ghostty falls back to its built-in JetBrains Mono.
+font-family = CommitMono Nerd Font Mono
 font-size = 11
 
 # Theme
