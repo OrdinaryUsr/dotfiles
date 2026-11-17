@@ -24,5 +24,9 @@ mouse-hide-while-typing = true
 
 # Keys
 keybind = ctrl+shift+slash=toggle_fullscreen
+# Quick terminal: drops down over any app. `global:` needs the Accessibility
+# permission and takes the key away from every other app, so plain cmd+enter
+# (send/submit in most apps) is avoided on purpose.
+keybind = global:cmd+shift+enter=toggle_quick_terminal
 # Left Option acts as Alt for tmux/nvim bindings, right Option still types symbols
 macos-option-as-alt = left
