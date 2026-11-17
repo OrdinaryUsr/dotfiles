@@ -1,8 +1,9 @@
-# Default editor vim
-export VISUAL=vim
+# Default editor nvim
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 
-export PATH="$PATH:/opt/nvim-linux64/bin"
+# Linux only: nvim installed from the release tarball
+[ -d /opt/nvim-linux64/bin ] && export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # Source custom functions
 [[ ! -f "${ZDOTDIR}/.zshrc_functions" ]] || source "${ZDOTDIR}/.zshrc_functions"
@@ -50,6 +51,10 @@ export KEYTIMEOUT=1
 # Activate vim_cursor_mode
 vim_cursor_mode
 
+# fzf shell integration: Ctrl+R history, Ctrl+T files, Alt+C cd, ** completion.
+# Must come after `bindkey -v` and fzf-tab so its bindings are not overwritten.
+command -v fzf >/dev/null 2>&1 && source <(fzf --zsh)
+
 # History
 HISTFILE=~/.histfile
 HISTSIZE=8000
@@ -71,7 +76,7 @@ setopt hist_find_no_dups
 # End of lines added by compinstall
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-export POWERLEVEL9K_CONFIG_FILE="${ZDOTDIR}/.p10k.zsh" p10k configure
+export POWERLEVEL9K_CONFIG_FILE="${ZDOTDIR}/.p10k.zsh"
 [[ ! -f "${ZDOTDIR}/.p10k.zsh" ]] || source "${ZDOTDIR}/.p10k.zsh"
 
 # >>> conda initialize >>>
