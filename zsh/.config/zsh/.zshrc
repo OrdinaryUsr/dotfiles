@@ -109,7 +109,7 @@ if [ -f "${HOME}/yandex-cloud/completion.bash.inc" ]; then source "${HOME}/yande
 # Yandex cloud end
 
 # opencode
-export PATH=/Users/d.samakhavets/.opencode/bin:$PATH
+export PATH="$HOME/.opencode/bin:$PATH"
 
 # Java 17 for React Native
 export JAVA_HOME=$(/usr/libexec/java_home -v 17)
