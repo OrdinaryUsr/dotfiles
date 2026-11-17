@@ -28,5 +28,8 @@ keybind = ctrl+shift+slash=toggle_fullscreen
 # permission and takes the key away from every other app, so plain cmd+enter
 # (send/submit in most apps) is avoided on purpose.
 keybind = global:cmd+shift+enter=toggle_quick_terminal
+# At the top of the screen: 30% of its height, 56% of its width
+quick-terminal-position = top
+quick-terminal-size = 30%,56%
 # Left Option acts as Alt for tmux/nvim bindings, right Option still types symbols
 macos-option-as-alt = left
