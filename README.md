@@ -29,6 +29,13 @@ stow nvim tmux kitty ghostty zsh opencode claude
   Секреты и машинно-зависимые переменные кладутся в `~/.config/zsh/.zshrc.local` (не отслеживается).
 - **tmux**: плагины ставятся через `~/.config/tmux/install.sh`.
 - **opencode**: `bun install` в `~/.config/opencode`.
+- **ghostty**: описание терминала `xterm-ghostty` нужно положить в `~/.terminfo`, иначе программы
+  на системном ncurses (например, `pinentry-curses` для gpg/pass) падают с «Screen or window too small»:
+
+  ```sh
+  TERMINFO=/Applications/Ghostty.app/Contents/Resources/terminfo infocmp -x xterm-ghostty > /tmp/ghostty.terminfo
+  tic -x -o ~/.terminfo /tmp/ghostty.terminfo
+  ```
 
 ## Повседневная работа
 

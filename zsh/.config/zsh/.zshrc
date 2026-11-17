@@ -2,6 +2,10 @@
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
+# Tell gpg which terminal to draw the passphrase prompt on.
+# $TTY (not `tty`) because stdin is redirected under p10k instant prompt.
+export GPG_TTY=$TTY
+
 # Linux only: nvim installed from the release tarball
 [ -d /opt/nvim-linux64/bin ] && export PATH="$PATH:/opt/nvim-linux64/bin"
 
