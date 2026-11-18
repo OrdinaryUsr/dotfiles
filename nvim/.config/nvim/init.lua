@@ -262,6 +262,7 @@ require('lazy').setup({
   require 'plugins.tmux', -- tmux integration
   require 'plugins.harpoon',
   require 'plugins.git-conflict',
+  require 'plugins.diffview', -- commit and branch review
 
   { -- Autoformat
     'stevearc/conform.nvim',
