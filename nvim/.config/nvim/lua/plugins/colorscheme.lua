@@ -9,6 +9,10 @@ return { -- You can easily change to a different colorscheme.
   opts = {
     -- Let the terminal background (and its opacity) show through.
     transparent_bg = true,
+    -- Code highlighting follows tokyonight's layout, in Dracula colours.
+    overrides = function(colors)
+      return require('custom.dracula_syntax').overrides(colors)
+    end,
   },
   config = function(_, opts)
     require('dracula').setup(opts)
